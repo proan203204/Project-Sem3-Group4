@@ -1,0 +1,71 @@
+﻿<script type="text/javascript">
+    function CheckForm() {
+        if (frmFeedback.value == '') {
+
+            confirm("Thanks for feedback");
+            frmFeedback.focus();
+            return false;
+        }
+        else {
+            r = confirm("Thanks for feedback");
+            if (r == false) return false;
+            else return true;
+        }
+    }
+</script>
+
+    <div class="row">
+
+        <div class="col-sm-8" style="border-right-style: inset; border-color: darkturquoise;">
+            <div class="feedback-form">
+                <h2 class="title text-center">Feedback</h2>
+                <div class="status alert alert-success" style="display: none"></div>
+                <form id="main-contact-form" class="contact-form row" name="frmFeedback" method="POST" action="" onsubmit="if(CheckForm() == false) return false">
+                    <div class="form-group col-md-6">
+                        <input type="text" name="name" class="form-control" required="required"
+                               placeholder="Tên bạn...">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="email" name="email" class="form-control" required="required"
+                               placeholder="gmail của bạn...">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <input type="date" name="date" class="form-control" required="required"
+                               placeholder="Ngày tháng">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <textarea name="content" required="required" class="form-control" rows="10"
+                                  placeholder="Lời phản hồi"></textarea>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="reset" onclick="resetForm()" class="btn btn-warning">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="contact-info">
+                <h2 class="title text-center">Liên hệ Admin</h2>
+                <div>
+                    <p>Nguyễn Minh Thoại: <i class="fa fa-phone"></i>0906535446</p>
+                    <p>Dương Tôn Trực: <i class="fa fa-phone"></i>0972374446</p>
+                    <p>Hoàng Thiên Ân: <i class="fa fa-phone"></i>0778247164</p>
+                    <p>Trương Ngô Chí: <i class="fa fa-phone"></i>0772093558</p>
+                </div><br>
+                <div class="social-networks">
+                    <h2 class="title text-center">Về Trang Chủ</h2>
+                    <ul>
+                        <li>
+                            <a href="http://localhost:54293">
+                                <p>Home Page</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
